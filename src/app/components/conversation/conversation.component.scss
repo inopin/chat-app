@@ -1,0 +1,72 @@
+.messages {
+  display: flex;
+  flex-direction: column;
+  &-list {
+    padding: 0 0 0 16px;
+    height: 415px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: #f9f9fd;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #A4B4C9;
+      border-radius: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+      background-color: #f9f9fd;
+    }
+    &__item {
+      margin-bottom: 6px;
+      &-author {
+        margin-left: 35px;
+        font-size: 11px;
+        line-height: 0px;
+        color: #59677D;
+      }
+      &-text {
+        display: block;
+        position: relative;
+        padding: 16px 25px 20px 16px;
+        background: #EDF0F4;
+        border-radius: 5px 5px 0px 5px;
+        &-date {
+          position: absolute;
+          bottom: 0;
+          right: 4px;
+          font-size: 9px;
+          line-height: 20px;
+          color: #59677D;
+        }
+      }
+      &-wrapper {
+        display: flex;
+        align-items: flex-end;
+      }
+      &-avatar {
+        margin-right: 6px;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        background: #1F70F6;
+        color: #FFFFFF;
+        font-size: 13px;
+        text-align: center;
+        line-height: 29px;
+      }
+    }
+  }
+}
+.participants {
+  align-self: flex-end;
+  box-sizing: border-box;
+  padding: 5px 18px;
+  background: #147C9D;
+  border-radius: 0px 5px;
+  letter-spacing: 0.005em;
+  line-height: 140%;
+  font-weight: 600;
+  font-size: 9px;
+  color: #FFFFFF;
+}

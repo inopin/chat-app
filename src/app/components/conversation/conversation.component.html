@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <div *ngIf="messages" class="messages">
+    <div class="participants">
+      {{messages.data.numberOfParticipants}} участника
+    </div>
+    <div class="messages-list">
+      <div *ngFor="let message of messages.data.messages;" class="messages-list__item">
+        <span class="messages-list__item-author">
+          {{message.userInfo.firstName}}&nbsp;{{message.userInfo.lastName}}
+        </span>
+        <div class="messages-list__item-wrapper">
+          <div class="messages-list__item-avatar">
+            АГ
+          </div>
+          <span class="messages-list__item-text">
+            {{message.text}}
+            <span class="messages-list__item-text-date">
+            21.01.2021 11:11
+            </span>
+          </span>
+        </div>
+
+      </div>
+    </div>
+    <div class="message-input">
+      <form>
+        <input type="text">
+        <button type="submit">
+          отправить
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

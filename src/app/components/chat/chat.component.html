@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <h2>Чат с группой</h2>
+  <div class="chat-content">
+    <div class="chat-groups">
+      <ul *ngIf="groups" class="chat-groups__list">
+        <li routerLinkActive="active"
+            *ngFor="let group of groups.data.chatGroupsInfo;"
+            class="chat-groups__item"
+        >
+          <button>
+            <a [routerLink]="['/chat/conversation/', group.groupId]">{{group.groupTitle}}</a>
+            <div *ngIf="group.unreadMessages !=0;" class="marker">
+            </div>
+          </button>
+
+          <div>
+            <span>
+              Замерщик на топографо-геодезических и маркшейдерских работах (17.09.2020 - 19.01.2021)
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="chat-messages">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>
